@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PharmaPro.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fb1d66ae0a14fb76abc233335ac3a10b0883dd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7142c2489da5ca86b64675f56698f439c497e27d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PharmaPro.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PharmaPro.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

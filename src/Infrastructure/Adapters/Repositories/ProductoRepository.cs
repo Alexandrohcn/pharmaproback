@@ -1,43 +1,50 @@
+using Microsoft.EntityFrameworkCore;
 using PharmaPro.Application.Ports.Outbound;
 using PharmaPro.Domain.Entities;
+using PharmaPro.Infrastructure.Persistence;
 
 namespace PharmaPro.Infrastructure.Adapters.Repositories;
 
 public class ProductoRepository : IProductoRepository
 {
-    // Simulación en memoria o adaptador Supabase
-    private static readonly List<Producto> _productos = new();
-    private static long _nextId = 1;
+    private readonly PharmaDbContext _context;
 
-    public Task<IEnumerable<Producto>> GetAllAsync()
+    public ProductoRepository(PharmaDbContext context)
     {
-        return Task.FromResult<IEnumerable<Producto>>(_productos);
+        _context = context;
     }
 
-    public Task<Producto?> GetByIdAsync(long id)
+    public async Task<IEnumerable<Producto>> GetAllAsync()
     {
-        var prod = _productos.FirstOrDefault(p => p.Id == id);
-        return Task.FromResult(prod);
+        return await _context.Productos.AsNoTracking().ToListAsync();
     }
 
-    public Task<Producto> AddAsync(Producto producto)
+    public async Task<Producto?> GetByIdAsync(long id)
     {
-        producto.Id = _nextId++;
-        _productos.Add(producto);
-        return Task.FromResult(producto);
+        return await _context.Productos.FindAsync(id);
     }
 
-    public Task<bool> UpdateAsync(Producto producto)
+    public async Task<Producto> AddAsync(Producto producto)
     {
-        var index = _productos.FindIndex(p => p.Id == producto.Id);
-        if (index == -1) return Task.FromResult(false);
-        _productos[index] = producto;
-        return Task.FromResult(true);
+        _context.Productos.Add(producto);
+        await _context.SaveChangesAsync();
+        return producto;
     }
 
-    public Task<bool> DeleteAsync(long id)
+    public async Task<bool> UpdateAsync(Producto producto)
     {
-        var count = _productos.RemoveAll(p => p.Id == id);
-        return Task.FromResult(count > 0);
+        _context.Productos.Update(producto);
+        var rows = await _context.SaveChangesAsync();
+        return rows > 0;
+    }
+
+    public async Task<bool> DeleteAsync(long id)
+    {
+        var producto = await _context.Productos.FindAsync(id);
+        if (producto == null) return false;
+
+        _context.Productos.Remove(producto);
+        var rows = await _context.SaveChangesAsync();
+        return rows > 0;
     }
 }
