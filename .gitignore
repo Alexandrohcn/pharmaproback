@@ -1,3 +1,10 @@
+# .NET build output
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+
 # node_modules
 node_modules/
 npm-debug.log*
