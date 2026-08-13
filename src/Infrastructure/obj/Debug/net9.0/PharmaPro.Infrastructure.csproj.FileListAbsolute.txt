@@ -16,3 +16,5 @@ C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Infrastruct
 C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Infrastructure\obj\Debug\net9.0\refint\PharmaPro.Infrastructure.dll
 C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Infrastructure\obj\Debug\net9.0\PharmaPro.Infrastructure.pdb
 C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Infrastructure\obj\Debug\net9.0\ref\PharmaPro.Infrastructure.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Infrastructure\bin\Debug\net9.0\PharmaPro.Infrastructure.runtimeconfig.json
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Infrastructure\obj\Debug\net9.0\PharmaPro.Infrastructure.genruntimeconfig.cache

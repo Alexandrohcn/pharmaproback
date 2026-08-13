@@ -39,3 +39,16 @@ C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\obj\Deb
 C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\obj\Debug\net9.0\PharmaPro.Api.pdb
 C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\obj\Debug\net9.0\PharmaPro.Api.genruntimeconfig.cache
 C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\obj\Debug\net9.0\ref\PharmaPro.Api.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Npgsql.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Api\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
