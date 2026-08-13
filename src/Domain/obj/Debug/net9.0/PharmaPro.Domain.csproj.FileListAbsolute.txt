@@ -1,0 +1,12 @@
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\bin\Debug\net9.0\PharmaPro.Domain.deps.json
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\bin\Debug\net9.0\PharmaPro.Domain.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\bin\Debug\net9.0\PharmaPro.Domain.pdb
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.AssemblyInfoInputs.cache
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.AssemblyInfo.cs
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.sourcelink.json
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\refint\PharmaPro.Domain.dll
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\PharmaPro.Domain.pdb
+C:\Users\ALEXANDRO\.gemini\antigravity-ide\scratch\pharmaproback\src\Domain\obj\Debug\net9.0\ref\PharmaPro.Domain.dll
