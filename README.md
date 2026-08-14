@@ -6,9 +6,11 @@ Backend API para el sistema de gestión farmacéutica y punto de venta **PharmaP
 Servicio backend diseñado para gestionar inventario multi-sucursal, punto de venta (POS), lotes de medicamentos, compras, proveedores y control de cajas.
 
 ## 🛠️ Tecnologías
-- Node.js / TypeScript
-- Supabase (PostgreSQL 17)
-- Express / NestJS
+- .NET 9
+- ASP.NET Core Web API
+- Entity Framework Core
+- Npgsql / PostgreSQL
+- Supabase
 
 ## 📊 Arquitectura del Sistema
 El sistema interactúa con la base de datos `pharmabackend` en Supabase con los siguientes módulos:
@@ -19,6 +21,11 @@ El sistema interactúa con la base de datos `pharmabackend` en Supabase con los 
 - **Caja & Finanzas:** Cajas, Arqueos de Caja, Cuadre diario.
 - **Proveedores & Compras:** Proveedores, Registro de Compras y Comprobantes.
 
+## 📚 Guías de desarrollo
+
+- [Guía para trabajar 2 personas](docs/GUIA_TRABAJO_2_PERSONAS.md)
+- [Guía para avanzar Backend + Frontend](docs/GUIA_BACKEND_FRONTEND.md)
+
 ## 📝 Configuración e Instalación
 ```bash
 # Clonar el repositorio
@@ -27,6 +34,12 @@ git clone https://github.com/Alexandrohcn/pharmaproback.git
 # Entrar al directorio
 cd pharmaproback
 
-# Instalación de dependencias (próximamente)
-npm install
+# Restaurar dependencias
+dotnet restore PharmaPro.slnx
+
+# Compilar
+dotnet build PharmaPro.slnx
+
+# Ejecutar API
+dotnet run --project src/Api/PharmaPro.Api.csproj
 ```

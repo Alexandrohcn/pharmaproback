@@ -13,8 +13,13 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("SupabaseConnection") 
-                               ?? "Host=db.fkaerrcwxkrjthazgpza.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=YOUR_POSTGRES_PASSWORD";
+        var connectionString = configuration.GetConnectionString("SupabaseConnection");
+
+        if (string.IsNullOrWhiteSpace(connectionString))
+        {
+            throw new InvalidOperationException(
+                "ConnectionStrings:SupabaseConnection is not configured. Use .NET User Secrets for local development or ConnectionStrings__SupabaseConnection in the environment.");
+        }
 
         services.AddDbContext<PharmaDbContext>(options =>
             options.UseNpgsql(connectionString));
