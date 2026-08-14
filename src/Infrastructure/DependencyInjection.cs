@@ -25,10 +25,14 @@ public static class DependencyInjection
             options.UseNpgsql(connectionString));
 
         // Outbound Adapters (Repositories)
+        services.AddScoped<ICategoriaRepository, CategoriaRepository>();
         services.AddScoped<IProductoRepository, ProductoRepository>();
+        services.AddScoped<IProveedorRepository, ProveedorRepository>();
 
         // Inbound Services (Use Cases)
+        services.AddScoped<ICategoriaUseCase, CategoriaService>();
         services.AddScoped<IProductoUseCase, ProductoService>();
+        services.AddScoped<IProveedorUseCase, ProveedorService>();
 
         return services;
     }

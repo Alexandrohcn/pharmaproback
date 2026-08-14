@@ -55,4 +55,35 @@ public class ProductoService : IProductoUseCase
             nuevoProducto.Id, nuevoProducto.Codigo, nuevoProducto.Nombre, nuevoProducto.PrincipioActivo, nuevoProducto.PrecioVenta, nuevoProducto.RequiereReceta, nuevoProducto.Estado
         );
     }
+
+    public async Task<ProductoDto?> ActualizarAsync(long id, UpdateProductoDto dto)
+    {
+        var producto = await _productoRepository.GetByIdAsync(id);
+        if (producto == null) return null;
+
+        producto.Codigo = dto.Codigo;
+        producto.Nombre = dto.Nombre;
+        producto.PrincipioActivo = dto.PrincipioActivo;
+        producto.Descripcion = dto.Descripcion;
+        producto.CategoriaId = dto.CategoriaId;
+        producto.LaboratorioId = dto.LaboratorioId;
+        producto.PrecioCompra = dto.PrecioCompra;
+        producto.PrecioVenta = dto.PrecioVenta;
+        producto.StockMinimo = dto.StockMinimo;
+        producto.StockMaximo = dto.StockMaximo;
+        producto.RequiereReceta = dto.RequiereReceta;
+        producto.Estado = dto.Estado;
+        producto.UpdatedAt = DateTime.UtcNow;
+
+        await _productoRepository.UpdateAsync(producto);
+
+        return new ProductoDto(
+            producto.Id, producto.Codigo, producto.Nombre, producto.PrincipioActivo, producto.PrecioVenta, producto.RequiereReceta, producto.Estado
+        );
+    }
+
+    public Task<bool> EliminarAsync(long id)
+    {
+        return _productoRepository.DeleteAsync(id);
+    }
 }
