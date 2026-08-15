@@ -37,6 +37,10 @@ cd pharmaproback
 # Restaurar dependencias
 dotnet restore PharmaPro.slnx
 
+# Configurar variables locales
+# Copiar .env.example como .env y completar la cadena nueva de Supabase.
+# El archivo .env esta ignorado por Git.
+
 # Compilar
 dotnet build PharmaPro.slnx
 
