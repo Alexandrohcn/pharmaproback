@@ -61,7 +61,7 @@ Archivo `.env.example` sugerido para el frontend:
 
 ```env
 VITE_API_BASE_URL=http://localhost:5000
-VITE_SUPABASE_URL=https://fkaerrcwxkrjthazgpza.supabase.co
+VITE_SUPABASE_URL=https://TU_PROYECTO.supabase.co
 VITE_SUPABASE_ANON_KEY=poner_anon_key_aqui
 ```
 

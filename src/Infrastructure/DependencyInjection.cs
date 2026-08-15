@@ -18,7 +18,11 @@ public static class DependencyInjection
         if (string.IsNullOrWhiteSpace(connectionString))
         {
             throw new InvalidOperationException(
-                "ConnectionStrings:SupabaseConnection is not configured. Use .NET User Secrets for local development or ConnectionStrings__SupabaseConnection in the environment.");
+                "ConnectionStrings:SupabaseConnection no está configurada. " +
+                "Opciones para configurarla:\n" +
+                "  1. LOCAL: Copia .env.example como .env y define ConnectionStrings__SupabaseConnection.\n" +
+                "  2. USER SECRETS: dotnet user-secrets set \"ConnectionStrings:SupabaseConnection\" \"tu-cadena\".\n" +
+                "  3. VPS/PRODUCCION: Define la variable de entorno ConnectionStrings__SupabaseConnection en el servidor.");
         }
 
         services.AddDbContext<PharmaDbContext>(options =>

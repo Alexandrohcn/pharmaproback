@@ -21,17 +21,27 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(localFrontendCorsPolicy, policy =>
     {
-        var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ??
-        [
-            "http://localhost:5173",
-            "http://127.0.0.1:5173",
-            "http://localhost:4173",
-            "http://127.0.0.1:4173"
-        ];
+        // En produccion/VPS configurar Cors__AllowedOrigins__0, Cors__AllowedOrigins__1 via variables de entorno o .env
+        // En desarrollo local, si no hay configuracion, se usan los origenes locales como fallback.
+        var configuredOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
 
-        policy.WithOrigins(allowedOrigins)
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        var allowedOrigins = configuredOrigins is { Length: > 0 }
+            ? configuredOrigins
+            : builder.Environment.IsDevelopment()
+                ? new[] { "http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:4173", "http://127.0.0.1:4173" }
+                : Array.Empty<string>();
+
+        if (allowedOrigins.Length == 0)
+        {
+            // En produccion sin configurar CORS, bloquear todo origen.
+            policy.SetIsOriginAllowed(_ => false);
+        }
+        else
+        {
+            policy.WithOrigins(allowedOrigins)
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        }
     });
 });
 

@@ -11,10 +11,19 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Environment variables
+# Environment variables (nunca subir secretos)
 .env
 .env.local
 .env.*.local
+
+# .NET User Secrets (directorio local del sistema)
+secrets.json
+
+# Archivos temporales y de respaldo
+*.bak
+*.tmp
+*.swp
+*~
 
 # IDE & OS files
 .DS_Store
@@ -23,4 +32,6 @@ Thumbs.db
 .idea/
 dist/
 build/
+
+# Carpetas generadas por scaffolding que no deben versionarse
 src/Domain/EntitiesBackup/
